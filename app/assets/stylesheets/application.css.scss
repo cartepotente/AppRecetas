@@ -1,0 +1,206 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets";	
+@import "bootstrap";
+
+body{
+margin-top: 70px;
+margin-bottom: 70px;
+background: #EBEEF3;
+}
+/*Diseño pagina*/
+
+
+@mixin box-shadow {
+	-webkit-box-shadow: rgba(0,0,0, 0.09) 0 2px 0;
+	-moz-box-shadow: rgba(0,0,0, 0.09) 0 2px 0;
+	box-shadow: rgba(0,0,0, 0.09) 0 2px 0;
+	
+}
+
+$verde: #59F708;
+$rojo:#B20400;
+
+.jumbotron{
+	background: white;
+}
+.main_content {
+	padding: 0 0 50px 0;
+}
+.alert{
+	padding:15px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	@include box-shadow;
+	background: white;
+	font-weight: bold;
+}
+
+#navbar{
+	@include box-shadow;
+	border:none;
+	padding: 0 0 2px 0;
+	background:$rojo;
+
+	
+		.navbar-brand{
+			text-transform: uppercase;
+			letter-spacing: -1px;
+			font-weight: bold;
+			font-size: 25px;
+			color: white;
+
+		}
+		a{
+			color: white;
+		}
+
+}
+/*index*/
+.recipe{
+	background: white;
+	border-radius: 5px;
+	margin-bottom: 40px;
+	@include box-shadow;
+	.image_wrapper{
+		max-width: 100%;
+		border-radius: 5px 5px 0 0;
+		overflow: hidden;
+
+	}
+}
+
+.img{
+	width: 100%;
+	-webkit-transition: all .3s ease-out;
+	-moz-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+	&:hover{
+		transform: scale(1.05);
+	}
+}
+
+h2 {
+	padding: 15px 5%;
+	margin: 0;
+	font-size:20px;
+	font-weight: normal;
+	line-height: 1.5;
+	a{
+		color:$rojo;
+	}
+}
+
+/*Pagina receta*/
+
+#racipe_top{
+	margin-bottom: 50px;
+}
+
+#recipe_info, #ingredients, #directions{
+	background: white;
+	@include box-shadow ;
+	min-height: 260px;
+	border-radius: 5px;
+	padding: 2em 8%;
+}
+
+.recipe_image{
+	max-width:100%;
+	border-radius:5px;
+	@include box-shadow;
+	background: white;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	
+}
+#recipe_info{
+	h1{
+		font-size: 36px;
+		font-weight: normal;
+		color:$rojo;
+	}
+	.description{
+		color: #8a8a8a;
+		font-size: 20px;
+	}
+}
+
+ #ingredients, #directions{
+ 	margin-bottom: 50px;
+ 	ul, ol{
+ 		padding:0 0 0 18px;
+ 		li{
+ 			padding: 1em 0;
+ 			border-bottom: 1px solid #eaeaea;
+ 		}
+ 	}
+ }
+#directions{
+	overflow: scroll;
+
+}
+ .form-inline{
+ 	margin-top: 15px;
+ }
+
+ .form-input{
+ 	width:65% !important;
+ 	float: left;
+ }
+ .form-buttom{
+ 	float: left;
+ 	width: 30% !important;
+ 	margin-left: 5%;
+
+ }
+
+.add-button{
+	margin-top:25px;
+}
+
+/* footer*/
+
+footer{
+	margin-top: 45px;	
+	padding: 5px 10px 5px 10px;
+	border-top: 1px solid #eaeaea;
+	color: #fff;
+	background: #999;
+}
+footer a {
+	color: #fff;
+
+}
+footer a:hover {
+	color: #222;
+	background-color: #888;
+}
+
+footer .small {
+	float: left;
+}
+
+footer ul{ 
+	float: right;
+	list-style: none;
+}
+footer ul li {
+	float: left;
+	margin-left: 10px;
+	}

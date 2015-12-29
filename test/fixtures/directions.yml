@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  paso: MyText
+  recipe_id: 
+
+two:
+  paso: MyText
+  recipe_id: 
